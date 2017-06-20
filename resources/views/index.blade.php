@@ -13,23 +13,23 @@
     <title>Restaurant</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="apple-touch-icon" href="assets/images/my_images/icon-title.jpg"> -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="apple-touch-icon" href="public/assets/images/my_images/icon-title.jpg"> -->
+    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+    <!--        <link rel="stylesheet" href="public/assets/css/bootstrap-theme.min.css">-->
     <!--For Plugins external css-->
-    <link rel="stylesheet" href="{{url('assets/css/plugins.css')}}"/>
-    <link rel="stylesheet" href="assets/css/lato-webfont.css"/>
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{url('public/assets/css/plugins.css')}}"/>
+    <link rel="stylesheet" href="public/assets/css/lato-webfont.css"/>
+    <link rel="stylesheet" href="public/assets/css/magnific-popup.css">
     <!-- My custom CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/page.css">
+    <link rel="stylesheet" type="text/css" href="public/assets/css/page.css">
     <!-- Daterator -->
-    <link rel="stylesheet" type="text/css" href="assets/css/fm.datetator.jquery.css">
+    <link rel="stylesheet" type="text/css" href="public/assets/css/fm.datetator.jquery.css">
     <!--Theme custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <!--Theme Responsive css-->
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="public/assets/css/responsive.css"/>
+    <script src="public/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -50,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""/></a>
+            <a class="navbar-brand" href="#"><img src="public/assets/images/logo.png" alt=""/></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -76,7 +76,7 @@
                 <div class="home-content sections">
                     <h1>the right ingredients</h1>
                     <h1>for the right food</h1>
-                    <div class="text-center"><img src="assets/images/my_images/decoration.png"></div>
+                    <div class="text-center"><img src="public/assets/images/my_images/decoration.png"></div>
                     <div class="text-center">
                         <a target="_blank" href="#">
                             <button class="btn-book btn-black">Book A Table</button>
@@ -95,17 +95,17 @@
     <div class=" text-center">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <h1 class="title-about">Just the right food</h1>
-            <div class="divider2"><img src="assets/images/my_images/devider2.png"></div>
+            <div class="divider2"><img src="public/assets/images/my_images/devider2.png"></div>
             <p class="about-text">
                 If you’ve been to one of our restaurants, you’ve seen – and tasted - what keeps our customer coming back
                 for more.Perfect materials and freshly baked food,delicious Lambda cakes, muffins,and gourmet coffes
                 make us hard to resist!<br/>Stop in today and check us out!
             </p>
-            <img class="img-cook" src="assets/images/my_images/img-cook.png">
+            <img class="img-cook" src="public/assets/images/my_images/img-cook.png">
         </div>
         <!-- Example row of columns -->
         <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="assets/images/my_images/disc.png">
+            <img src="public/assets/images/my_images/disc.png">
         </div>
     </div> <!-- /container -->
 </section>
@@ -114,16 +114,16 @@
     <div class="col-md-5 col-md-offset-6">
         <div class="content-right">
             <h3 class="title-ingredients">Fine ingredients</h3>
-            <img src="assets/images/my_images/devider3.png" alt="" class="devider">
+            <img src="public/assets/images/my_images/devider3.png" alt="" class="devider">
             <p>If you’ve been to one of our restaurants, you’ve seen – and tasted - what keeps our customer coming back
                 for more.Perfect materials and freshly baked food,delicious Lambda cakes, muffins,and gourmet coffes
                 make us hard to resist! Stop in today and check us out!</p>
             <div class="ingre-item">
-                <div class="ingredients_images"><img src="assets/images/my_images/section3-item1.png" alt=""
+                <div class="ingredients_images"><img src="public/assets/images/my_images/section3-item1.png" alt=""
                                                      class="img-circle"></div>
-                <div class="ingredients_images"><img src="assets/images/my_images/section3-item2.png" alt=""
+                <div class="ingredients_images"><img src="public/assets/images/my_images/section3-item2.png" alt=""
                                                      class="img-circle"></div>
-                <div class="ingredients_images"><img src="assets/images/my_images/section3-item3.png" alt=""
+                <div class="ingredients_images"><img src="public/assets/images/my_images/section3-item3.png" alt=""
                                                      class="img-circle"></div>
             </div>
             <div style="clear: both;"></div>
@@ -136,7 +136,7 @@
         <div class="col-md-6 menu-left">
             <div class="box-item">
                 <h3 class="title-menu">Appetisers</h3>
-                <img src="assets/images/my_images/devider2.png" alt="">
+                <img src="public/assets/images/my_images/devider2.png" alt="">
                 <ul class="details-menu">
                     <li>
                         <div class="header-details">
@@ -163,7 +163,7 @@
             </div>
             <div class="box-item">
                 <h3 class="title-menu">Salads</h3>
-                <img src="assets/images/my_images/devider2.png" alt="">
+                <img src="public/assets/images/my_images/devider2.png" alt="">
                 <ul class="details-menu">
                     <li>
                         <div class="header-details">
@@ -197,7 +197,7 @@
         <div class="col-md-6 menu-right">
             <div class="box-item">
                 <h3 class="title-menu">Main Dishes</h3>
-                <img src="assets/images/my_images/devider2.png" alt="">
+                <img src="public/assets/images/my_images/devider2.png" alt="">
                 <ul class="details-menu">
                     <li>
                         <div class="header-details">
@@ -217,7 +217,7 @@
             </div>
             <div class="box-item">
                 <h3 class="title-menu">Starters</h3>
-                <img src="assets/images/my_images/devider2.png" alt="">
+                <img src="public/assets/images/my_images/devider2.png" alt="">
                 <ul class="details-menu">
                     <li>
                         <div class="header-details">
@@ -260,7 +260,7 @@
     <div class="col-md-6 col-md-offset-3">
         <div class="content-center">
             <h3 class="title-review">Gust Reviews</h3>
-            <img src="assets/images/my_images/devider3.png" alt="" class="devider">
+            <img src="public/assets/images/my_images/devider3.png" alt="" class="devider">
             <dir class="" style="clear: both;"></dir>
             <span class="quote">“</span>
             <p>If you’ve been to one of our restaurants, you’ve seen – and tasted - what keeps our customer coming back
@@ -277,16 +277,16 @@
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="row">
                 <div class="col-md-6">
-                    <img height="460px" width="100%" src="assets/images/my_images/item1-section5.png">
+                    <img height="460px" width="100%" src="public/assets/images/my_images/item1-section5.png">
                 </div>
                 <div class="col-md-6">
-                    <img height="460px" width="100%" src="assets/images/my_images/item2-section5.png">
+                    <img height="460px" width="100%" src="public/assets/images/my_images/item2-section5.png">
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-sm-12 col-xs-12">
             <h1 class="title-reservation">Just the right food</h1>
-            <div class="divider2"><img src="assets/images/my_images/devider2.png"></div>
+            <div class="divider2"><img src="public/assets/images/my_images/devider2.png"></div>
             <p class="about-text">
                 If you’ve been to one of our restaurants, you’ve seen – and tasted - what keeps our customer coming back
                 for more.Perfect materials and freshly baked food.<br/>
@@ -337,7 +337,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 footer-about">
                 <div class="copyright text-left text-center footer-about-title ">
                     <h2>About Us</h2>
-                    <img class="footer-devider" src="assets/images/my_images/devider3.png">
+                    <img class="footer-devider" src="public/assets/images/my_images/devider3.png">
                     <p>
                         Lambda's new and expanded Chelsea location represents a truly authentic Greek
                         patisserie,featuring breakfasts of fresh croissants and streaming bowls of cafe.Lamda the best
@@ -348,7 +348,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 footer-open">
                 <div class="copyright text-left text-center footer-open-title ">
                     <h2>Opening House</h2>
-                    <img class="footer-devider" src="assets/images/my_images/devider3.png">
+                    <img class="footer-devider" src="public/assets/images/my_images/devider3.png">
                     <p><strong>Mon-Thu:</strong>7:00am - 8:00pm<br/><strong>Fri-Sun:</strong>7:00am - 10:00pm</p>
                     <ul class="footer-icons">
                         <li><a href=""><i class="fa fa-cc-discover fa-lg" aria-hidden="true"></i></a></li>
@@ -361,7 +361,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 footer-location">
                 <div class="copyright text-left text-center footer-location-title ">
                     <h2>Our Location</h2>
-                    <img class="footer-devider" src="assets/images/my_images/devider3.png">
+                    <img class="footer-devider" src="public/assets/images/my_images/devider3.png">
                     <p><strong>19th Paradise Street Sitia</strong><br/><strong>128 Meserole Avenue</strong></p>
                     <ul class="footer-icons">
                         <li><a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
@@ -375,11 +375,11 @@
     </div>
     </div>
 </footer>
-<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="public/assets/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="public/assets/js/vendor/bootstrap.min.js"></script>
+<script src="public/assets/js/jquery.magnific-popup.js"></script>
+<script src="public/assets/js/plugins.js"></script>
+<script src="public/assets/js/main.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript">
     $("#datepicker").datepicker();
