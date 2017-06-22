@@ -134,124 +134,81 @@
 <section id="menu" class="sections">
     <div class="container text-center">
         <div class="col-md-6 menu-left">
-            <div class="box-item">
-                <h3 class="title-menu">Appetisers</h3>
-                <img src="public/assets/images/my_images/devider2.png" alt="">
-                <ul class="details-menu">
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Tzatsiki</a>
-                            <span class="pull-right">$3.99</span>
+            @if( ! empty($categories))
+                @for($i = 0 ; $i < 2; $i++)
+                    @if (! empty($categories[$i]))
+                        <div class="box-item">
+                            <h3 class="title-menu">{{$categories[$i]->name}}</h3>
+                            <img src="public/assets/images/my_images/devider2.png" alt="">
+                            <ul class="details-menu">
+                                @for($j = 0; $j< 2; $j++)
+                                    @if($categories[$i]->items[$j]->type == 0)
+                                        <li>
+                                            <div class="header-details">
+                                                <a class="pull-left" href="">{{$categories[$i]->items[$j]->name}}</a>
+                                                <span class="pull-right">$<?php echo $categories[$i]->items[$j]->price;?></span>
+                                            </div>
+                                            <div class="text-details">{{$categories[$i]->items[$j]->description}}
+                                            </div>
+                                        </li>
+                                    @else
+                                        <fieldset style="border: 1px black #e4dcbd">
+                                            <legend>special</legend>
+                                            <li>
+                                                <div class="header-details">
+                                                    <a class="pull-left"
+                                                       href="">{{$categories[$i]->items[$j]->name}}</a>
+                                                    <span class="pull-right">$<?php echo $categories[$i]->items[$j]->price;?></span>
+                                                </div>
+                                                <div class="text-details">{{$categories[$i]->items[$j]->description}}</div>
+                                            </li>
+                                        </fieldset>
+                                    @endif
+                                @endfor
+                            </ul>
                         </div>
-                        <div class="text-details">Refreshing traditional cucumber and garlic yoghurt dip</div>
-                    </li>
-                    <li class="special">
-                        <div class="header-details">
-                            <a class="pull-left" href="">Aubergine Salad</a>
-                            <span class="pull-right">$5.50</span>
-                        </div>
-                        <div class="text-details">Pureed eggplant,garlic,green pepper and tomato dip</div>
-                    </li>
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Aubergine Salad</a>
-                            <span class="pull-right">$5.25</span>
-                        </div>
-                        <div class="text-details">Pureed eggplant,garlic,green pepper and tomato dip</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="box-item">
-                <h3 class="title-menu">Salads</h3>
-                <img src="public/assets/images/my_images/devider2.png" alt="">
-                <ul class="details-menu">
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Olive Special</a>
-                            <span class="pull-right">$5.99</span>
-                        </div>
-                        <div class="text-details">Refreshing traditional cucumber and garlic yoghurt dip.</div>
-                    </li>
-                    <fieldset style="border: 1px black #e4dcbd">
-                        <legend>special</legend>
-                        <li>
-                            <div class="header-details">
-                                <a class="pull-left" href="">Aubergine Salad</a>
-                                <span class="pull-right">$5.50</span>
-                            </div>
-                            <div class="text-details">.Pureed eggplant, garlic, green pepper and tomato dip.</div>
-                        </li>
-                    </fieldset>
-                    s
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Gusto Salad</a>
-                            <span class="pull-right">$5.25</span>
-                        </div>
-                        <div class="text-details">Pureed eggplant, garlic, green pepper and tomato dip.</div>
-                    </li>
-                </ul>
-            </div>
+                    @endif
+                @endfor
+            @endif
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-6 menu-right">
-            <div class="box-item">
-                <h3 class="title-menu">Main Dishes</h3>
-                <img src="public/assets/images/my_images/devider2.png" alt="">
-                <ul class="details-menu">
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Cornish Mackerel</a>
-                            <span class="pull-right">$3.99</span>
+            @if( ! empty($categories))
+                @for($i = 2 ; $i < 4; $i++)
+                    @if (! empty($categories[$i]))
+                        <div class="box-item">
+                            <h3 class="title-menu">{{$categories[$i]->name}}</h3>
+                            <img src="public/assets/images/my_images/devider2.png" alt="">
+                            <ul class="details-menu">
+                                @for($j = 0; $j< 2; $j++)
+                                    @if($categories[$i]->items[$j]->type == 0)
+                                        <li>
+                                            <div class="header-details">
+                                                <a class="pull-left" href="">{{$categories[$i]->items[$j]->name}}</a>
+                                                <span class="pull-right">$<?php echo $categories[$i]->items[$j]->price;?></span>
+                                            </div>
+                                            <div class="text-details">{{$categories[$i]->items[$j]->description}}
+                                            </div>
+                                        </li>
+                                    @else
+                                        <fieldset style="border: 1px black #e4dcbd">
+                                            <legend>special</legend>
+                                            <li>
+                                                <div class="header-details">
+                                                    <a class="pull-left"
+                                                       href="">{{$categories[$i]->items[$j]->name}}</a>
+                                                    <span class="pull-right">$<?php echo $categories[$i]->items[$j]->price;?></span>
+                                                </div>
+                                                <div class="text-details">{{$categories[$i]->items[$j]->description}}</div>
+                                            </li>
+                                        </fieldset>
+                                    @endif
+                                @endfor
+                            </ul>
                         </div>
-                        <div class="text-details">Refreshing traditional cucumber and garlic yoghurt dip.</div>
-                    </li>
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Roast Lamb Salad</a>
-                            <span class="pull-right">$5.50</span>
-                        </div>
-                        <div class="text-details">Pureed eggplant,garlic,green pepper and tomato dip</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="box-item">
-                <h3 class="title-menu">Starters</h3>
-                <img src="public/assets/images/my_images/devider2.png" alt="">
-                <ul class="details-menu">
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Houloumi</a>
-                            <span class="pull-right">$3.99</span>
-                        </div>
-                        <div class="text-details">Refreshing traditional cucumber and garlic yoghurt dip</div>
-                    </li>
-                    <fieldset style="border: 1px black #e4dcbd">
-                        <legend>special</legend>
-                        <li>
-                            <div class="header-details">
-                                <a class="pull-left" href="">Spinach Pie</a>
-                                <span class="pull-right">$5.50</span>
-                            </div>
-                            <div class="text-details">Pureed eggplant,garlic,green pepper and tomato dip</div>
-                        </li>
-                    </fieldset>
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Freid Chicken</a>
-                            <span class="pull-right">$5.25</span>
-                        </div>
-                        <div class="text-details">Pureed eggplant,garlic,green pepper and tomato dip</div>
-                    </li>
-                    <li>
-                        <div class="header-details">
-                            <a class="pull-left" href="">Pastitsio</a>
-                            <span class="pull-right">$5.25</span>
-                        </div>
-                        <div class="text-details">Refreshing traditional cucumber and garlic yoghurt dip.</div>
-                    </li>
-                </ul>
-            </div>
+                    @endif
+                @endfor
+            @endif
         </div>
     </div> <!-- /container -->
 </section>
@@ -294,14 +251,26 @@
                 out! Perfect materials and freshly baked food.
             </p>
             <div class="form-resvation">
-                <form action="" method="post">
+                <form action="{{route('resevation')}}" method="post">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <div class="row">
                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                         <label for="name">Name</label>
                         <input type="text" name="name" class="form-control" placeholder="your name *" required>
+                        @if($errors->has('name'))
+                            <div class="alert alert-danger">
+                                {{$errors->first('name')}}
+                            </div>
+                        @endif
                     </div>
                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                         <label for="email">Email</label>
                         <input type="email" name="email" class="form-control" placeholder="your email *" required>
+                        @if($errors->has('email'))
+                            <div class="alert alert-danger">
+                                {{$errors->first('email')}}
+                            </div>
+                        @endif
                     </div>
                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                         <label for="date">Date</label>
@@ -311,9 +280,9 @@
                     </div>
                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                         <label for="party">Party Number</label>
-                        <select class="party form-control">
-                            <option value="Party Number">1</option>
-                            <option value="Party Number">2</option>
+                        <select name="party-number" class="party form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
                         </select>
                     </div>
                     <div class="col-md-12">
@@ -382,7 +351,7 @@
 <script src="public/assets/js/main.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript">
-    $("#datepicker").datepicker();
+    $("#datepicker").datepicker({dateFormat: 'yy-mm-dd'});
 </script>
 </body>
 </html>

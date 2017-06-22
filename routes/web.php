@@ -9,10 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/', function () {
-	return view('index');
-});
-Route::post('postReserve', function (Illuminate\Http\Request $request) {
-	$name = $request->input('name');
-	return view('index');
-});
+Route::get('/', 'HomeController@index');
+Route::get('getCategory', 'CategoryController@getAll');
+Route::post('resevation', 'CustomerController@save')->name('resevation');
