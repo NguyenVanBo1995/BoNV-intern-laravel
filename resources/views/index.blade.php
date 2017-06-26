@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="public/assets/css/style.css">
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="public/assets/css/responsive.css"/>
+    <link rel="stylesheet" href="public/assets/css/sweetalert.css"/>
     <script src="public/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -78,10 +79,10 @@
                     <h1>for the right food</h1>
                     <div class="text-center"><img src="public/assets/images/my_images/decoration.png"></div>
                     <div class="text-center">
-                        <a target="_blank" href="#">
+                        <a target="_blank" href="#reservation">
                             <button class="btn-book btn-black">Book A Table</button>
                         </a>
-                        <a target="_blank" href="#">
+                        <a target="_blank" href="#menu">
                             <button class="btn-menu btn-white">See The Menu</button>
                         </a>
                     </div>
@@ -254,40 +255,40 @@
                 <form action="{{route('resevation')}}" method="post">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="row">
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="your name *" required>
-                        @if($errors->has('name'))
-                            <div class="alert alert-danger">
-                                {{$errors->first('name')}}
-                            </div>
-                        @endif
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" class="form-control" placeholder="your email *" required>
-                        @if($errors->has('email'))
-                            <div class="alert alert-danger">
-                                {{$errors->first('email')}}
-                            </div>
-                        @endif
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                        <label for="date">Date</label>
-                        <!-- <input class="form-control res-date" placeholder="date *"> -->
-                        <input type="text" name="date" class="form-control" id="datepicker" placeholder="date *"
-                               required>
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                        <label for="party">Party Number</label>
-                        <select name="party-number" class="party form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                    </div>
-                    <div class="col-md-12">
-                        <button class="btn btn-warning res-btn">Book now!</button>
-                    </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="your name *" required>
+                            @if($errors->has('name'))
+                                <div class="alert alert-danger">
+                                    {{$errors->first('name')}}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="your email *" required>
+                            @if($errors->has('email'))
+                                <div class="alert alert-danger">
+                                    {{$errors->first('email')}}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label for="date">Date</label>
+                            <!-- <input class="form-control res-date" placeholder="date *"> -->
+                            <input type="text" name="date" class="form-control" id="datepicker" placeholder="date *"
+                                   required>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label for="party">Party Number</label>
+                            <select name="party-number" class="party form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-warning res-btn">Book now!</button>
+                        </div>
                 </form>
             </div>
         </div>
@@ -350,8 +351,16 @@
 <script src="public/assets/js/plugins.js"></script>
 <script src="public/assets/js/main.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="public/assets/js/sweetalert-dev.js"></script>
 <script type="text/javascript">
-    $("#datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+    var dateToday = new Date();
+    $("#datepicker").datepicker({
+        maxDate: dateToday,
+        dateFormat: 'yy-mm-dd'
+    });
+    @if(! empty(session()->has('bookStatus')))
+        swal("Success!", "Your register is successfully", "success");
+    @endif
 </script>
 </body>
 </html>

@@ -16,9 +16,8 @@ class CustomerController extends Controller
         $rule = [
             'name'=> 'required|max:255',
             'email'=>'required|email',
-            'party-number'=> 'required'
+            'party-number'=> 'required',
         ];
-
         $validator = Validator::make($request->all(), $rule);
         if($validator->fails()){
             return back()->withErrors($validator)->withInput();
@@ -31,6 +30,6 @@ class CustomerController extends Controller
             $customer->number = $party_number;
             $customer->save();
         }
-        return back();
+        return back()->with('bookStatus', 'success');
     }
 }
